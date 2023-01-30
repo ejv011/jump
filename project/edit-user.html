@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <a href="./chat.html">Group Chat</a>
+        <a href="#" class="active">Manage Users</a>
+        <a href="./documents-list.html">Manage Documents</a>
+        <a href="./logout.html">Logout</a>
+    </nav>
+    <div class="container">
+        <h1 class="head-nav">Edit User Information</h1>
+        <form action="./users-list.html" method="GET">
+            <table class="edit-table-input" cellspacing="40">
+                <tr>
+                    <td class="edit-label"><label for="email">Full Name</label></td>
+                    <td><input type="text" name="text" class="full-name" value="Anne Hunter" required></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="edit-label"><label for="password">Email</label></td>
+                    <td><input type="email" name="password" class="password" value="ann.hunter@mail.com" required></td>
+                    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                </tr>
+            </table>
+            <input type="submit" value="Save" class="save-button">
+        </form>
+    </div>
+</body>
+
+</html>

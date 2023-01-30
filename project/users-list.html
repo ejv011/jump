@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communications Application</title>
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <a href="./chat.html">Group Chat</a>
+        <a href="#" class="active">Manage Users</a>
+        <a href="./documents-list.html">Manage Documents</a>
+        <a href="./logout.html">Logout</a>
+    </nav>
+    <div class="users-list-div">
+        <div class="users-list-header">
+            <h1>Users</h1>
+        </div>
+        <div class="users-list-table-div">
+            <table class="users-list-table">
+                <tr class="users-list-table-row">
+                    <th class="users-list-table-col col-head col-1">Name</th>
+                    <th class="users-list-table-col col-head col-2">User Email ID</th>
+                    <th class="users-list-table-col col-head col-3">&nbsp;</th>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">Text User</td>
+                    <td class="users-list-table-col col-2">textuser@gmail.com</td>
+                    <td class="users-list-table-col col-3">
+                        <a href="./edit-user.html" class="edit-button">Edit</a> |
+                        <button class="delete-button" name="delete" id="delete-button"
+                            onclick="deleteBtn()">Delete</button>
+                    </td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">Anne Hunter</td>
+                    <td class="users-list-table-col col-2">anne.hunter@mail.com</td>
+                    <td class="users-list-table-col col-3">
+                        <a href="./edit-user.html" class="edit-button">Edit</a> |
+                        <button class="delete-button" name="delete" id="delete-button"
+                            onclick="deleteBtn()">Delete</button>
+                    </td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">Jale Boser</td>
+                    <td class="users-list-table-col col-2">Jale@yahoo.com</td>
+                    <td class="users-list-table-col col-3">
+                        <a href="./edit-user.html" class="edit-button">Edit</a> |
+                        <button class="delete-button" name="delete" id="delete-button"
+                            onclick="deleteBtn()">Delete</button>
+                    </td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="users-list-table-row">
+                    <td class="users-list-table-col col-1">&nbsp;</td>
+                    <td class="users-list-table-col col-2">&nbsp;</td>
+                    <td class="users-list-table-col col-3">&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="modal-delete" id="deleter">
+        <div class="modal-delete-head">
+            <p class="modal-delete-head-para">Confirm User Deletion</p>
+            <a class="modal-delete-exit"><span>&#10005;</span></a>
+        </div>
+        <div class="modal-delete-content">
+            <div class="modal-delete-confirm">
+                <img src="./images/modal-delete-logo.png" alt="modal-delete-logo" class="modal-delete-logo">
+                <div class="modal-delete-para">
+                    <p>Are you Sure?</p>
+                </div>
+            </div>
+            <input type="button" value="ok" class="btn-ok">
+            <input type="button" value="Cancel" class="btn-cancel">
+        </div>
+    </div>
+    <script src="./project.js"></script>
+</body>
+
+</html>

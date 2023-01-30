@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document List</title>
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <a href="./chat.html">Group Chat</a>
+        <a href="./users-list.html">Manage Users</a>
+        <a href="./documents-list.html" class="active">Manage Documents</a>
+        <a href="./logout.html">Logout</a>
+    </nav>
+    <div class="doc-list-div">
+        <div class="doc-list-header">
+            <h1>Documents</h1>
+        </div>
+        <div class="doc-list-table-div">
+            <table class="doc-list-table">
+                <tr class="doc-list-table-row">
+                    <th class="doc-list-table-col col-head col-1">Label</th>
+                    <th class="doc-list-table-col col-head col-2">File Name</th>
+                    <th class="doc-list-table-col col-head col-3">Action</th>
+                </tr>
+                <tr class="doc-list-table-row">
+                    <td class="doc-list-table-col col-1">Sales Report</td>
+                    <td class="doc-list-table-col col-2">sales-Sep2014.xls</td>
+                    <td class="doc-list-table-col col-3">
+                        <a class="edit-button" onclick="editButton()">Edit</a> |
+                        <button class="delete-button" name="delete" id="delete-button"
+                            onclick="deleteBtn()">Delete</button> |
+                        <a href="./share.html" class="share-button">Share</a>
+                    </td>
+                </tr>
+                <tr class="doc-list-table-row">
+                    <td class="doc-list-table-col col-1">Quarterly Summery</td>
+                    <td class="doc-list-table-col col-2">SummaryQ4-2014.ppt</td>
+                    <td class="doc-list-table-col col-3">
+                        <a href="#" class="edit-button" onclick="editButton()">Edit</a> |
+                        <button class="delete-button" name="delete" id="delete-button"
+                            onclick="deleteBtn()">Delete</button> |
+                        <a href="./share.html" class="share-button">Share</a>
+                    </td>
+                </tr>
+                <tr class="doc-list-table-row">
+                    <td class="doc-list-table-col col-1">Projection 2013-14</td>
+                    <td class="doc-list-table-col col-2">SalesProfitProjection.xls</td>
+                    <td class="doc-list-table-col col-3">
+                        <a href="#" class="edit-button" onclick="editButton()">Edit</a> |
+                        <button class="delete-button" name="delete" onclick="deleteBtn()">Delete</button> |
+                        <a href="./share.html" class="share-button">Share</a>
+                    </td>
+                </tr>
+                <tr class="doc-list-table-row">
+                    <td class="doc-list-table-col col-1">&nbsp;</td>
+                    <td class="doc-list-table-col col-2">&nbsp;</td>
+                    <td class="doc-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="doc-list-table-row">
+                    <td class="doc-list-table-col col-1">&nbsp;</td>
+                    <td class="doc-list-table-col col-2">&nbsp;</td>
+                    <td class="doc-list-table-col col-3">&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="shared-doc-list-div">
+        <div class="doc-list-header">
+            <h1>Shared Documents</h1>
+        </div>
+        <div class="doc-list-table-div">
+            <table class="doc-list-table">
+                <tr class="doc-list-table-row">
+                    <th class="doc-list-table-col col-head col-1">Label</th>
+                    <th class="doc-list-table-col col-head col-2">File Name</th>
+                    <th class="doc-list-table-col col-head col-3">Shared by</th>
+                </tr>
+                <tr class="doc-list-table-row">
+                    <td class="doc-list-table-col col-1">Sales Report</td>
+                    <td class="doc-list-table-col col-2">Sale-Attend-Sep2014.ppt</td>
+                    <td class="doc-list-table-col col-3">ann.hunter@mail.com</td>
+                </tr>
+                <tr class="doc-list-table-row">
+                    <td class="doc-list-table-col col-1">Office Rules</td>
+                    <td class="doc-list-table-col col-2">OfficeRule.doc</td>
+                    <td class="doc-list-table-col col-3">hr@office.com</td>
+                </tr>
+                <tr class="doc-list-table-row">
+                    <td class="doc-list-table-col col-1">&nbsp;</td>
+                    <td class="doc-list-table-col col-2">&nbsp;</td>
+                    <td class="doc-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="doc-list-table-row">
+                    <td class="doc-list-table-col col-1">&nbsp;</td>
+                    <td class="doc-list-table-col col-2">&nbsp;</td>
+                    <td class="doc-list-table-col col-3">&nbsp;</td>
+                </tr>
+                <tr class="doc-list-table-row">
+                    <td class="doc-list-table-col col-1">&nbsp;</td>
+                    <td class="doc-list-table-col col-2">&nbsp;</td>
+                    <td class="doc-list-table-col col-3">&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+        <div class="upload-button-div">
+            <button class="upload-button" name="upload" onclick="uploadButton()">+ Add Upload</button>
+        </div>
+    </div>
+
+    <div class="modal-upload" id="uploader">
+        <div class="modal-upload-head-div">
+            <p class="modal-upload-head-title">Upload</p>
+            <a class="modal-upload-exit"><span>&#10005;</span></a>
+        </div>
+        <div class="modal-upload-content">
+            <form action="./documents-list.html">
+                <table class="upload-table">
+                    <tr class="upload-table-row">
+                        <td class="upload-table-col-1">File Description</td>
+                        <td class="upload-table-col-2"><input type="text" name="name-file" placeholder="Sample File"
+                                class="name-file-text"></td>
+                    </tr>
+                    <tr class="upload-table-row">
+                        <td class="upload-table-col-1">File Upload</td>
+                        <td class="upload-table-col-2"><input type="file" name="file-upload" class="file-upload-button">
+                        </td>
+                    </tr>
+                    <tr class="upload-table-row">
+                        <td class="upload-table-col-1"><input type="submit" value="Upload Now"
+                                class="upload-now-button"></td>
+                        <td class="upload-table-col-2"><input type="button" value="Cancel" class="doc-cancel-button">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-delete" id="deleter">
+        <div class="modal-delete-head">
+            <p class="modal-delete-head-para">Confirm File Deletion</p>
+            <a class="modal-delete-exit"><span>&#10005;</span></a>
+        </div>
+        <div class="modal-delete-content">
+            <div class="modal-delete-confirm">
+                <img src="./images/modal-delete-logo.png" alt="modal-delete-logo" class="modal-delete-logo">
+                <div class="modal-delete-para">
+                    <p>Are you Sure?</p>
+                </div>
+            </div>
+            <input type="button" value="ok" class="btn-ok">
+            <input type="button" value="Cancel" class="btn-cancel">
+        </div>
+    </div>
+
+    <div class="modal-edit" id="editor">
+        <div class="modal-edit-head-div">
+            <p class="modal-edit-head-title">Edit</p>
+            <a class="modal-edit-exit"><span>&#10005;</span></a>
+        </div>
+        <div class="modal-edit-content">
+            <form action="./documents-list.html">
+                <table class="doc-edit-table">
+                    <tr class="doc-edit-table-row">
+                        <td class="doc-edit-table-col-1">File Description</td>
+                        <td class="doc-edit-table-col-2"><input type="text" name="name-file" placeholder="Sample Report"
+                                class="name-file-text"></td>
+                    </tr>
+                    <tr class="doc-edit-table-row">
+                        <td class="doc-edit-table-col-1"></td>
+                        <td class="doc-edit-table-col-2">
+                            <input type="submit" value="Save" class="doc-save-button">
+                            <input type="button" value="Cancel" class="doc-cancel-button modal-edit-cancel">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <script src="./project.js"></script>
+</body>
+
+</html>

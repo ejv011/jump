@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share</title>
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <a href="./chat.html">Group Chat</a>
+        <a href="./users-list.html">Manage Users</a>
+        <a href="./documents-list.html" class="active">Manage Documents</a>
+        <a href="./logout.html">Logout</a>
+    </nav>
+    <div class="share-upload-div">
+        <div class="share-upload-header">
+            <h1>Upload Sharing: <span class="share-upload-span">Sample.txt</span></h1>
+        </div>
+        <div class="share-upload-table-div">
+            <table class="share-upload-table">
+                <tr class="share-upload-table-row">
+                    <th class="share-upload-table-col col-head">Shared User</th>
+                    <th class="share-upload-table-col col-head center-col">Action</th>
+                </tr>
+                <tr class="share-upload-table-row">
+                    <td class="share-upload-table-col">Anne Hunter</td>
+                    <td class="share-upload-table-col center-col"><button class="delete-button" name="delete"
+                            id="delete-button" onclick="deleteBtn()">Remove</button></td>
+                </tr>
+                <tr class="share-upload-table-row">
+                    <td class="share-upload-table-col">Test User</td>
+                    <td class="share-upload-table-col center-col"><button class="delete-button" name="delete"
+                            id="delete-button" onclick="deleteBtn()">Remove</button></td>
+                </tr>
+                <tr class="share-upload-table-row">
+                    <td class="share-upload-table-col">&nbsp;</td>
+                    <td class="share-upload-table-col center-col">&nbsp;</td>
+                </tr>
+                <tr class="share-upload-table-row">
+                    <td class="share-upload-table-col">&nbsp;</td>
+                    <td class="share-upload-table-col center-col">&nbsp;</td>
+                </tr>
+                <tr class="share-upload-table-row">
+                    <td class="share-upload-table-col">&nbsp;</td>
+                    <td class="share-upload-table-col center-col">&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="share-add-div">
+        <div class="share-add-header">
+            <h1>Add Sharing:</h1>
+        </div>
+        <div class="share-add-content">
+            <form action="./share.html">
+                <p class="share-add-user">Choose User :</p>
+                <div class="classic">
+                    <select name="add-share" class="share-add-select">
+                        <option value="user1" class="share-add-option" hidden selected>J Bose</option>
+                        <option value="user2" class="share-add-option">HR</option>
+                        <option value="user3" class="share-add-option">Harsh Zaveri</option>
+                    </select>
+                    <label for="add-share" class="down-arrow">&#x25BC;</label>
+                </div>
+                <input type="submit" value="Add Share" class="share-add-button">
+            </form>
+        </div>
+    </div>
+    <div class="modal-delete" id="deleter">
+        <div class="modal-delete-head">
+            <p class="modal-delete-head-para">Confirm From Web Page</p>
+            <a class="modal-delete-exit"><span>&#10005;</span></a>
+        </div>
+        <div class="modal-delete-content">
+            <div class="modal-delete-confirm">
+                <img src="./images/modal-delete-logo.png" alt="modal-delete-logo" class="modal-delete-logo">
+                <div class="modal-delete-para">
+                    <p>Are you Sure?</p>
+                </div>
+            </div>
+            <input type="button" value="ok" class="btn-ok">
+            <input type="button" value="Cancel" class="btn-cancel">
+        </div>
+    </div>
+    <script src="./project.js"></script>
+</body>
+
+</html>
